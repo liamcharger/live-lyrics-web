@@ -8,6 +8,7 @@ import './styles/index.css';
 import App from './App';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 import ProtectedRoute from './components/ProtectedRoute';
 import { AuthProvider } from './contexts/AuthContext';
 
@@ -30,6 +31,12 @@ const router = createBrowserRouter([
       <ProtectedRoute>
       <Dashboard />
       </ProtectedRoute>
+    ),
+  },
+  {
+    path: "privacypolicy",
+    element: (
+      <PrivacyPolicy />
     ),
   },
 ]);
