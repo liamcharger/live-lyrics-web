@@ -98,6 +98,7 @@ body {
   justify-content: center;
   margin: 0 auto;
   max-width: 1300px;
+  flex-wrap: wrap;
 }
 
 .altChildCtn {
@@ -128,7 +129,7 @@ body {
 }
 
 .gridCtn .header {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .underline {
@@ -153,10 +154,13 @@ body {
 
 .ftGrid {
   display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 45px;
-  max-width: 900px;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .gridItem {
@@ -243,17 +247,29 @@ footer .copyright {
   color: #4b4b4b;
 }
 
-@media (max-width: 800px) {
-  .altCtn {
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 995px) {
+  .hero .txtCtn {
+    font-size: 18pt;
   }
 }
 
 @media (max-width: 960px) {
   .hero {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     height: auto;
+  }
+  
+  .hero .txtCtn {
+    font-size: 18pt;
+  }
+  
+  .altCtn {
+    align-items: center;
+  }
+  
+  .altCtn:nth-child(2n) {
+    margin-top: 20px;
+    flex-direction: column-reverse;
   }
 }
