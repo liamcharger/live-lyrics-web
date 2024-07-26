@@ -6,9 +6,7 @@ import {
 } from "react-router-dom";
 import './styles/index.css';
 import App from './App';
-import Login from './pages/Login';
-import Dashboard from './pages/Dashboard';
-import PrivacyPolicy from './pages/PrivacyPolicy';
+import { Login, Dashboard, PrivacyPolicy, SongDetail } from './pages';
 import ProtectedRoute from './components/ProtectedRoute';
 import { AuthProvider } from './contexts/AuthContext';
 import './styles/Global.css';
@@ -31,6 +29,14 @@ const router = createBrowserRouter([
     element: (
       <ProtectedRoute>
       <Dashboard />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "song/:id",
+    element: (
+      <ProtectedRoute>
+      <SongDetail />
       </ProtectedRoute>
     ),
   },

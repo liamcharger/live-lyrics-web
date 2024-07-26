@@ -1,50 +1,53 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useAuth } from '../contexts/AuthContext.js';
+import { collection, getDocs, doc } from 'firebase/firestore';
+import { firestore } from '../firebase';
 import styles from '../styles/Dashboard.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHandPointLeft, faCommentDots, faEnvelope, faPlayCircle } from '@fortawesome/free-regular-svg-icons'
+import { Link } from 'react-router-dom';
 
 function Dashboard() {
+    const [songs, setSongs] = useState([]);
+    const { user, loading } = useAuth();
+
+    useEffect(() => {
+        if (loading) return;
+
+        const fetchSongs = async () => {
+            if (!user) return;
+
+            const userSongsCollection = collection(doc(firestore, 'users', user.uid), 'songs');
+            const songsSnapshot = await getDocs(userSongsCollection);
+            const songsList = songsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            setSongs(songsList);
+        };
+
+        fetchSongs();
+    }, [user, loading]);
+
+    if (loading) {
+        return <div className="loading">Loading...</div>;
+    }
+
     return (
-        <>
-        <div className={styles.mainCtn}>
-        <div className={styles.sidebar}>
-        <div className={styles.header}>
-        <div className="spcr"></div>
-        <button>LW</button>
-        </div>
-        </div>
         <div className={styles.main}>
-        <div className={styles.header}>
-        <button>
-            {/* Replace with chevron */}
-            <FontAwesomeIcon icon={faHandPointLeft} />
-        </button>
-        <div className={styles.infoStack}>
-        <div className={styles.subtitle}>Set List: August 13, 2024</div>
-        <h3>Song Name</h3>
+            <div className={styles.header}>
+            <h3>Live Lyrics</h3>
+                <div className="spcr"></div>
+                <button>LW</button>
+            </div>
+            <div className={styles.content}>
+                <div className={styles.songGrid}>
+                    {songs.map(song => (
+                        <Link to={`/song/${song.id}`} key={song.id} className={styles.songLink}>
+                            <div className={styles.songItem}>
+                                <h3>{song.title}</h3>
+                            </div>
+                        </Link>
+                    ))}
+                </div>
+            </div>
         </div>
-        <div className="spcr"></div>
-        <button>
-            {/* Replace with chevron */}
-            <FontAwesomeIcon icon={faPlayCircle} />
-        </button>
-        <button>
-            {/* Replace with doc */}
-            <FontAwesomeIcon icon={faEnvelope} />
-        </button>
-        <button>
-            {/* Replace with textformat icon */}
-            <FontAwesomeIcon icon={faEnvelope} />
-        </button>
-        <button>
-            {/* Replace with ellipsis */}
-            <FontAwesomeIcon icon={faCommentDots} />
-        </button>
-        </div>
-        </div>
-        </div>
-        </>
-    )
+    );
 }
 
 export default Dashboard;
