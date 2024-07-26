@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleCheck, faAddressBook, faBell, faBookmark, faCalendar, faPaperPlane, faClock, faBarChart, faChessQueen } from '@fortawesome/free-regular-svg-icons'
 import { faDiscord, faAppStoreIos } from '@fortawesome/free-brands-svg-icons'
 import styles from './styles/App.module.css';
-import './styles/Global.css';
 
 function App() {
   return (

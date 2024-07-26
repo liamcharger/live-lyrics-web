@@ -4,7 +4,6 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../firebase';
 import styles from '../styles/Login.module.css';
 import detailImage from '../assets/hero-app-preview.png';
-import '../styles/Global.css';
 
 function Login() {
     const navigate = useNavigate();

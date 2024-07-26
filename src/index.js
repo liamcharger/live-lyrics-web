@@ -11,6 +11,7 @@ import Dashboard from './pages/Dashboard';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import ProtectedRoute from './components/ProtectedRoute';
 import { AuthProvider } from './contexts/AuthContext';
+import './styles/Global.css';
 
 const router = createBrowserRouter([
   {

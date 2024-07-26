@@ -1,4 +1,3 @@
-import '../styles/Global.css';
 import styles from '../styles/Navbar.module.css';
 import { useAuth } from '../contexts/AuthContext';
 import { Link } from "react-router-dom";

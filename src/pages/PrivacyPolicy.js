@@ -2,7 +2,6 @@ import React from 'react';
 import styles from '../styles/PrivacyPolicy.module.css';
 import Navbar from '../components/Navbar';
 import { useLocation } from 'react-router-dom';
-import '../styles/Global.css';
 
 function PrivacyPolicy() {
     const location = useLocation();

@@ -1,0 +1,84 @@
+.mainCtn {
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 300px;
+    background-color: rgb(29, 29, 29);
+}
+
+.sidebar .header {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    border-bottom: solid 1px #323232;
+}
+
+.sidebar .body {
+    padding: 15px;
+}
+
+.main {
+    width: 100%;
+}
+
+.main .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-bottom: solid 1px #323232;
+}
+
+.header .infoStack {
+   display: flex;
+   flex-direction: column;
+   margin-left: 10px;
+   text-align: left;
+}
+
+.infoStack .subtitle {
+    font-size: 10pt;
+    color: darkgray;
+ }
+
+.main .header h3 {
+    margin: 0;
+    font-weight: 800;
+}
+
+.header button {
+    width: 38px;
+    height: 38px;
+    padding: 8px;
+    border-radius: 25%;
+    background-color: rgb(50, 50, 50);
+    color: white;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 11.5pt;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.header button:hover {
+    width: 38px;
+    height: 38px;
+    padding: 8px;
+    border-radius: 25%;
+    margin: 0 auto;
+    font-size: 11.5pt;
+    background-color: rgb(40, 40, 40);
+}
+
+.header button + button {
+    margin-left: 10px;
+}
