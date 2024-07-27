@@ -55,6 +55,7 @@
     cursor: pointer;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     height: 100%;
     transition: background-color 0.3s;
 }

@@ -11,11 +11,11 @@ import styles from '../styles/Dashboard.module.css';
 function Dashboard() {
     const [songs, setSongs] = useState([]);
     const [folders, setFolders] = useState([]);
-    const { user, loading } = useAuth();
-    const localSongs = ["", "", "", "", "", "", "", ""];
+    const [loading, setLoading] = useState([]);
+    const { user, loadingAuth } = useAuth(true);
     
     useEffect(() => {
-        if (loading) return;
+        if (loadingAuth) return;
         
         const fetchSongs = async () => {
             if (!user) return;
@@ -28,14 +28,13 @@ function Dashboard() {
             const userSongsCollection = collection(doc(firestore, 'users', user.uid), 'songs');
             const songsSnapshot = await getDocs(userSongsCollection);
             const songsList = songsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+
             setSongs(songsList);
-            
-            setFolders(localSongs);
-            setSongs(localSongs);
+            setLoading(false);
         };
         
         fetchSongs();
-    }, [user, loading]);
+    }, [user, loadingAuth]);
     
     return (
         <div className={styles.main}>
@@ -65,9 +64,9 @@ function Dashboard() {
                 <div className="spcr"></div>
                 <FontAwesomeIcon icon={faChevronRight} style={{color: "gray"}}/>
                 </div>
-                <h3>Folder Title</h3>
+                <h3>{folder.title}</h3>
                 <div className={styles.subtitle}>
-                Date
+                {new Date(folder.timestamp.seconds * 1000).toLocaleDateString("en-US")}
                 </div>
                 </div>
                 </Link>
@@ -86,11 +85,8 @@ function Dashboard() {
                 <Link to={`/song/${song.id}`} key={song.id} className={styles.rowLink}>
                 <div className={styles.rowItem}>
                 <div className={styles.songHCtn}>
-                <h3>Song Title</h3>
+                <h3>{song.title}</h3>
                 <FontAwesomeIcon icon={faChevronRight} style={{color: "gray"}}/>
-                </div>
-                <div className={styles.subtitle}>
-                Artist Name
                 </div>
                 </div>
                 </Link>
