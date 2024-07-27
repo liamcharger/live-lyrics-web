@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import { doc, getDoc } from 'firebase/firestore';
 import { firestore } from '../firebase';
 import { useAuth } from '../contexts/AuthContext';
+import { Loading } from '../components';
+import { NotFound } from '../pages';
 import styles from '../styles/SongDetail.module.css';
 
 function SongDetail() {
@@ -34,11 +36,11 @@ function SongDetail() {
     }, [id, user.uid]);
 
     if (loading) {
-        return <div>Loading...</div>;
+        return <Loading />;
     }
 
     if (!song) {
-        return <div>Song not found.</div>;
+        return <NotFound />;
     }
 
     return (

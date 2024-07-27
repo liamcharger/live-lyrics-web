@@ -1,0 +1,22 @@
+.notFoundCtn {
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.notFoundCtn .txtCtn {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.notFoundCtn .txtCtn h1 {
+    margin: 8px auto;
+}
+
+.notFoundCtn .cpt {
+    color: #a9a9a9;
+}

@@ -21,23 +21,37 @@
     padding: 20px;
 }
 
-.songGrid {
+.grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
     align-items: stretch;
+    margin-bottom: 35px;
 }
 
-.songLink {
+.rowLink {
     text-decoration: none;
     color: inherit;
 }
 
-.songItem {
+.newContentRowItem {
+    background-color: #007AFF;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.newContentRowItem:hover {
+    background-color: #0065d1;
+}
+
+.rowItem {
     background-color: #292929;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
+    padding: 13px;
+    border-radius: 12px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -45,13 +59,34 @@
     transition: background-color 0.3s;
 }
 
-.songItem:hover {
+.rowItem:hover {
     background-color: #3a3a3a;
 }
 
-.songItem h3 {
-    margin: 0;
+.folderHCtn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.rowItem h3 {
+    margin: 10px 0 4px 0;
     font-size: 16px;
+}
+
+.songHCtn {
+    display: flex;
+    flex-direction: row;
+}
+
+.songHCtn h3 {
+    margin: 0 auto 5px 0;
+    font-size: 16px;
+}
+
+.rowItem .subtitle {
+    color: gray;
+    font-size: 11pt;
 }
 
 .header button {
@@ -71,6 +106,12 @@
 }
 
 .header button:hover {
+    width: 38px;
+    height: 38px;
+    padding: 8px;
+    border-radius: 25%;
+    font-size: 11.5pt;
+    margin: 0 auto;
     background-color: rgb(40, 40, 40);
 }
 

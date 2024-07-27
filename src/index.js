@@ -7,7 +7,7 @@ import {
 import './styles/index.css';
 import App from './App';
 import { Login, Dashboard, PrivacyPolicy, SongDetail } from './pages';
-import ProtectedRoute from './components/ProtectedRoute';
+import { ProtectedRoute } from './components';
 import { AuthProvider } from './contexts/AuthContext';
 import './styles/Global.css';
 
