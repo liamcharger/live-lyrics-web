@@ -1,121 +1,55 @@
-.header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 15.6px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-bottom: solid 1px #1a1b1f;
-}
-
-.header h3 {
-    margin: 0 auto;
-}
-
-.spcr {
-    flex-grow: 1;
-}
-
-.content {
+.dashboard {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 16px;
+    height: 100vh;
     padding: 20px;
 }
 
-.grid {
+.leftColumn {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    align-items: stretch;
-    margin-bottom: 35px;
+    grid-template-rows: auto 1fr;
+    gap: 16px;
 }
 
-.rowLink {
-    text-decoration: none;
-    color: inherit;
+.overview {
+    background-color: #1a1b1f;
+    padding: 20px;
+    border-radius: 20px;
 }
 
-.newContentRowItem {
-    background-color: #007AFF;
-    border-radius: 12px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: background-color 0.3s;
+.overview .btnCtn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 12px;
 }
 
-.newContentRowItem:hover {
-    background-color: #0065d1;
-}
-
-.rowItem {
-    background-color: #292929;
-    padding: 13px;
-    border-radius: 12px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.overview .btnCtn .btn {
     height: 100%;
-    transition: background-color 0.3s;
+    margin: auto 0;
 }
 
-.rowItem:hover {
-    background-color: #3a3a3a;
+.sectionTwo {
+    padding: 16px;
 }
 
-.folderHCtn {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.sectionThree {
+    padding: 16px;
 }
 
-.rowItem h3 {
-    margin: 10px 0 4px 0;
-    font-size: 16px;
-}
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
 
-.songHCtn {
-    display: flex;
-    flex-direction: row;
-}
+    .leftColumn {
+        grid-template-rows: auto;
+    }
 
-.songHCtn h3 {
-    margin: 0 auto 0 0;
-    font-size: 16px;
-}
-
-.rowItem .subtitle {
-    color: gray;
-    font-size: 11pt;
-}
-
-.header button {
-    width: 38px;
-    height: 38px;
-    padding: 8px;
-    border-radius: 25%;
-    background-color: rgb(50, 50, 50);
-    color: white;
-    margin: 0 auto;
-    font-weight: 600;
-    font-size: 11.5pt;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s;
-}
-
-.header button:hover {
-    width: 38px;
-    height: 38px;
-    padding: 8px;
-    border-radius: 25%;
-    font-size: 11.5pt;
-    margin: 0 auto;
-    background-color: rgb(40, 40, 40);
-}
-
-.header button + button {
-    margin-left: 10px;
+    .sectionTwo,
+    .sectionThree {
+        grid-column: 1;
+        grid-row: auto;
+    }
 }
