@@ -34,6 +34,14 @@ const router = createBrowserRouter([
     ),
   },
   {
+    path: "folder/:id",
+    element: (
+      <ProtectedRoute>
+        {/* <SongDetail /> */}
+      </ProtectedRoute>
+    ),
+  },
+  {
     path: "privacypolicy",
     element: <PrivacyPolicy />,
   },

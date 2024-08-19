@@ -27,7 +27,7 @@
     align-items: center;
     width: 50%;
     height: 100vh;
-    background-color: #007AFF;
+    background-color: var(--primary-color);
 }
 
 .rightCtn img {
@@ -93,7 +93,7 @@ input {
 button {
     padding: 15px;
     border-radius: 12px;
-    background-color: #007AFF;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     margin-top: 20px;
@@ -105,7 +105,7 @@ button {
 button:hover {
     padding: 15px;
     border-radius: 12px;
-    background-color: #0065d1;
+    background-color: var(--primary-hover-color);
     color: white;
     border: none;
     margin-top: 20px;
