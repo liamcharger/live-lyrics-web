@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <main>
+      <main className={styles.main}>
         <div className={styles.hero}>
           <div className={styles.ctn}>
             <div className={styles.txtCtn}>

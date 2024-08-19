@@ -5,9 +5,7 @@ body {
 }
 
 .main {
-  margin: 0px;
-  display: flex;
-  justify-content: center;
+  margin-top: 70px;
 }
 
 .hero {
@@ -18,12 +16,14 @@ body {
   display: flex;
   justify-content: center;
   border-bottom: solid 1px #1a1b1f;
+  align-items: center;
 }
 
 .hero .ctn {
   max-width: 565px;
   font-size: 20pt;
   margin: 50px;
+  margin-bottom: -4px;
 }
 
 .hero .ctn img {
@@ -258,6 +258,19 @@ footer .copyright {
     flex-direction: column-reverse;
     align-items: center;
     height: auto;
+    text-align: center;
+  }
+
+  .hero .ctn {
+    margin-bottom: 40px;
+  }
+
+  .hero .ctn img {
+    margin-bottom: -60px;
+  }
+
+  .hero .btnCtn {
+    justify-content: center;
   }
   
   .hero .txtCtn {
