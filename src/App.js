@@ -1,18 +1,15 @@
 import screenshot from "./assets/hero-app-preview.png";
 import detailImage1 from "./assets/detail1.png";
-import logoDark from "./assets/logo-dark.png";
+import logo from "./assets/logo-dark.png";
 import Navbar from "./components/Navbar.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleCheck,
-  faAddressBook,
   faBell,
   faBookmark,
   faCalendar,
   faPaperPlane,
-  faClock,
-  faBarChart,
-  faChessQueen,
+  faClock
 } from "@fortawesome/free-regular-svg-icons";
 import { faDiscord, faAppStoreIos } from "@fortawesome/free-brands-svg-icons";
 import styles from "./styles/App.module.css";
@@ -182,7 +179,7 @@ function App() {
       <footer>
         <div className={styles.vCtn}>
           <div className={styles.hCtn}>
-            <img src={logoDark} alt="Logo"></img>
+            <img src={logo} alt="Logo"></img>
             <h2>Live Lyrics</h2>
             <div className="spcr"></div>
             <a href="https://apps.apple.com/us/app/lyrics-live/id6449195237">

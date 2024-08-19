@@ -111,3 +111,9 @@ button:hover {
     margin-top: 20px;
     font-size: 11pt;
 }
+
+@media (max-width: 960px) {
+    .rightCtn {
+        display: none;
+    }
+}
