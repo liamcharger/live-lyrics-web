@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import { ProtectedRoute } from "./components";
 import { AuthProvider } from "./contexts/AuthContext";
-import { Dashboard, Login, PrivacyPolicy, SongDetail } from "./pages";
+import { Dashboard, Login, PrivacyPolicy, SongDetail, NoAccess } from "./pages";
 import "./styles/Global.css";
 import "./styles/index.css";
 
@@ -16,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "login",
     element: <Login />,
+  },
+  {
+    path: "no-access",
+    element: <NoAccess />,
   },
   {
     path: "dashboard",

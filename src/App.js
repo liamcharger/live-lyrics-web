@@ -1,7 +1,7 @@
 import screenshot from "./assets/hero-app-preview.png";
 import detailImage1 from "./assets/detail1.png";
 import logo from "./assets/logo-dark.png";
-import Navbar from "./components/Navbar.js";
+// import Navbar from "./components/Navbar.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleCheck,
@@ -17,7 +17,8 @@ import styles from "./styles/App.module.css";
 function App() {
   return (
     <>
-      <Navbar />
+      {/* Remove Navbar until Dashboard development is finished */}
+      {/* <Navbar /> */}
       <main className={styles.main}>
         <div className={styles.hero}>
           <div className={styles.ctn}>
@@ -41,14 +42,15 @@ function App() {
                     Download for iOS
                   </button>
                 </a>
-                <a href="/dashboard">
+                {/* Disabled use on web button until finished development */}
+                {/* <a href="/dashboard">
                   <button
                     className={styles.secondaryBtn}
                     style={{ marginLeft: 0 }}
                   >
                     Use on the Web
                   </button>
-                </a>
+                </a> */}
               </div>
               <div className={styles.cpt}>
                 There's not an Android version...yet. We know, not ideal.
