@@ -235,14 +235,14 @@ footer .copyright {
 
 .btnBrand {
   all: initial;
-  margin-left: 18px;
+  margin-left: 22px;
   color: #7c7c7c;
   transition: 0.4s;
 }
 
 .btnBrand:hover {
   all: initial;
-  margin-left: 18px;
+  margin-left: 22px;
   transition: 0.4s;
   color: #656565;
 }
