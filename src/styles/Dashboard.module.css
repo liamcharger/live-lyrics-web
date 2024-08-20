@@ -37,6 +37,7 @@
 .overview .btnCtn .btn {
     height: 100%;
     margin: auto 0;
+    cursor: pointer;
 }
 
 .sectionHeader {
