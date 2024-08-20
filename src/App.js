@@ -11,9 +11,10 @@ import {
   faUserGroup,
   faCopy,
   faPaintBrush,
-  faList
+  faList,
+  faEnvelope
 } from "@fortawesome/free-solid-svg-icons"
-import { faDiscord, faAppStoreIos } from "@fortawesome/free-brands-svg-icons";
+import { faAppStoreIos } from "@fortawesome/free-brands-svg-icons";
 import styles from "./styles/App.module.css";
 
 function App() {
@@ -179,9 +180,9 @@ function App() {
       <FontAwesomeIcon icon={faAppStoreIos} size="2x" />
       </button>
       </a>
-      <a href="https://apps.apple.com/us/app/lyrics-live/id6449195237">
+      <a href="mailto:chargertech.help@gmail.com">
       <button className={styles.btnBrand}>
-      <FontAwesomeIcon icon={faDiscord} size="2x" />
+      <FontAwesomeIcon icon={faEnvelope} size="2x" />
       </button>
       </a>
       </div>

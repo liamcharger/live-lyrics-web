@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import { ProtectedRoute } from "./components";
 import { AuthProvider } from "./contexts/AuthContext";
-import { Dashboard, Login, PrivacyPolicy, SongDetail, NoAccess } from "./pages";
+import { Dashboard, Login, PrivacyPolicy, SongDetail, NoAccess, Support } from "./pages";
 import "./styles/Global.css";
 import "./styles/index.css";
 
@@ -48,6 +48,10 @@ const router = createBrowserRouter([
   {
     path: "privacypolicy",
     element: <PrivacyPolicy />,
+  },
+  {
+    path: "support",
+    element: <Support />,
   },
 ]);
 

@@ -4,3 +4,4 @@ export { default as Login } from "./Login";
 export { default as PrivacyPolicy } from "./PrivacyPolicy";
 export { default as SongDetail } from "./SongDetail";
 export { default as NoAccess } from "./NoAccess";
+export { default as Support } from "./Support";
