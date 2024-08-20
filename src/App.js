@@ -5,13 +5,14 @@ import logo from "./assets/logo-dark.png";
 // import Navbar from "./components/Navbar.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faCircleCheck,
-  faBell,
-  faBookmark,
-  faCalendar,
-  faPaperPlane,
-  faClock
-} from "@fortawesome/free-regular-svg-icons";
+  faEye,
+  faPlay,
+  faNoteSticky,
+  faUserGroup,
+  faCopy,
+  faPaintBrush,
+  faList
+} from "@fortawesome/free-solid-svg-icons"
 import { faDiscord, faAppStoreIos } from "@fortawesome/free-brands-svg-icons";
 import styles from "./styles/App.module.css";
 
@@ -102,7 +103,7 @@ function App() {
       </div>
       <div className={styles.ftGrid}>
       <div className={styles.gridItem}>
-      <FontAwesomeIcon icon={faCircleCheck} className={styles.icon} />
+      <FontAwesomeIcon icon={faEye} className={styles.icon} />
       <div className={styles.vCtn}>
       <h2>Beautiful design</h2>
       <p>
@@ -110,90 +111,90 @@ function App() {
       </p>
       </div>
       </div>
-      {/* <div className={styles.gridItem}>
-        <FontAwesomeIcon icon={faAddressBook} className={styles.icon} />
-        <div className={styles.vCtn}>
-        <h2>Customized experience</h2>
-        <p>
-        Personalize your lyrics display to match your preferences and stage conditions.
-        </p>
-        </div>
-        </div> */}
-        <div className={styles.gridItem}>
-        <FontAwesomeIcon icon={faBell} className={styles.icon} />
-        <div className={styles.vCtn}>
-        <h2>Organizations with set lists</h2>
-        <p>
-        Efficiently create and manage setlists to seamlessly organize your performance.
-        </p>
-        </div>
-        </div>
-        <div className={styles.gridItem}>
-        <FontAwesomeIcon icon={faBookmark} className={styles.icon} />
-        <div className={styles.vCtn}>
-        <h2>Play View</h2>
-        <p>
-        View your lyrics in a distraction free way that includes autoscroll and a metronome. 
-        </p>
-        </div>
-        </div>
-        <div className={styles.gridItem}>
-        <FontAwesomeIcon icon={faCalendar} className={styles.icon} />
-        <div className={styles.vCtn}>
-        <h2>Notes</h2>
-        <p>
-        Keep track of important notes for each song, ensuring you never miss a beat during rehearsals or performances.
-        </p>
-        </div>
-        </div>
-        <div className={styles.gridItem}>
-        <FontAwesomeIcon icon={faClock} className={styles.icon} />
-        <div className={styles.vCtn}>
-        <h2>Collaboration</h2>
-        <p>
-        Easily collaborate on songs and folders with friends and band members.
-        </p>
-        </div>
-        </div>
-        <div className={styles.gridItem}>
-        <FontAwesomeIcon icon={faPaperPlane} className={styles.icon} />
-        <div className={styles.vCtn}>
-        <h2>Song variations</h2>
-        <p>
-        Keep versions of your song organized by creating variations for guitar chords, vocal parts, and more.
-        </p>
-        </div>
-        </div>
-        </div>
-        </div>
-        </main>
-        <footer>
-        <div className={styles.vCtn}>
-        <div className={styles.hCtn}>
-        <img src={logo} alt="Logo"></img>
-        <h2>Live Lyrics</h2>
-        <div className="spcr"></div>
-        <a href="https://apps.apple.com/us/app/lyrics-live/id6449195237">
-        <button className={styles.btnBrand}>
-        <FontAwesomeIcon icon={faAppStoreIos} size="2x" />
-        </button>
-        </a>
-        <a href="https://apps.apple.com/us/app/lyrics-live/id6449195237">
-        <button className={styles.btnBrand}>
-        <FontAwesomeIcon icon={faDiscord} size="2x" />
-        </button>
-        </a>
-        </div>
-        <div className={styles.hCtn}>
-        <div className="spcr"></div>
-        <p className={styles.copyright}>Copyright © 2024 by Liam Willey</p>
-        <div className="spcr"></div>
-        </div>
-        </div>
-        </footer>
-        </>
-      );
-    }
-    
-    export default App;
-    
+      <div className={styles.gridItem}>
+      <FontAwesomeIcon icon={faPaintBrush} className={styles.icon} />
+      <div className={styles.vCtn}>
+      <h2>Customized experience</h2>
+      <p>
+      Personalize your lyrics display to match your preferences and stage conditions.
+      </p>
+      </div>
+      </div>
+      <div className={styles.gridItem}>
+      <FontAwesomeIcon icon={faList} className={styles.icon} />
+      <div className={styles.vCtn}>
+      <h2>Organizations with set lists</h2>
+      <p>
+      Efficiently create and manage setlists to seamlessly organize your performance.
+      </p>
+      </div>
+      </div>
+      <div className={styles.gridItem}>
+      <FontAwesomeIcon icon={faPlay} className={styles.icon} />
+      <div className={styles.vCtn}>
+      <h2>Play View</h2>
+      <p>
+      View your lyrics in a distraction free way that includes autoscroll and a metronome. 
+      </p>
+      </div>
+      </div>
+      <div className={styles.gridItem}>
+      <FontAwesomeIcon icon={faNoteSticky} className={styles.icon} />
+      <div className={styles.vCtn}>
+      <h2>Notes</h2>
+      <p>
+      Keep track of important notes for each song, ensuring you never miss a beat during rehearsals or performances.
+      </p>
+      </div>
+      </div>
+      <div className={styles.gridItem}>
+      <FontAwesomeIcon icon={faUserGroup} className={styles.icon} />
+      <div className={styles.vCtn}>
+      <h2>Collaboration</h2>
+      <p>
+      Easily collaborate on songs and folders with friends and band members.
+      </p>
+      </div>
+      </div>
+      <div className={styles.gridItem}>
+      <FontAwesomeIcon icon={faCopy} className={styles.icon} />
+      <div className={styles.vCtn}>
+      <h2>Song variations</h2>
+      <p>
+      Keep versions of your song organized by creating variations for guitar chords, vocal parts, and more.
+      </p>
+      </div>
+      </div>
+      </div>
+      </div>
+      </main>
+      <footer>
+      <div className={styles.vCtn}>
+      <div className={styles.hCtn}>
+      <img src={logo} alt="Logo"></img>
+      <h2>Live Lyrics</h2>
+      <div className="spcr"></div>
+      <a href="https://apps.apple.com/us/app/lyrics-live/id6449195237">
+      <button className={styles.btnBrand}>
+      <FontAwesomeIcon icon={faAppStoreIos} size="2x" />
+      </button>
+      </a>
+      <a href="https://apps.apple.com/us/app/lyrics-live/id6449195237">
+      <button className={styles.btnBrand}>
+      <FontAwesomeIcon icon={faDiscord} size="2x" />
+      </button>
+      </a>
+      </div>
+      <div className={styles.hCtn}>
+      <div className="spcr"></div>
+      <p className={styles.copyright}>Copyright © 2024 by Liam Willey</p>
+      <div className="spcr"></div>
+      </div>
+      </div>
+      </footer>
+      </>
+    );
+  }
+  
+  export default App;
+  
