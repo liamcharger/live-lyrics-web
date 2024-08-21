@@ -5,7 +5,9 @@ body {
 }
 
 .main {
-  margin-top: 70px;
+  margin-top: 20px;
+  /* Shrink space due to absent navbar */
+  /* margin-top: 70px; */
 }
 
 .hero {
@@ -90,6 +92,8 @@ body {
 
 .sct {
   padding: 25px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .altCtn {
@@ -117,7 +121,7 @@ body {
 }
 
 .altChildCtn img {
-  max-height: 400px;
+  max-width: 400px;
 }
 
 .gridCtn {
@@ -190,7 +194,9 @@ body {
 
 .gridItem .icon {
   background-color: #202020;
-  padding: 10px;
+  max-width: 22px;
+  min-height: 22px;
+  padding: 12px;
   border-radius: 10px;
   font-size: 20px;
   color: #007AFF;
@@ -251,6 +257,10 @@ footer .copyright {
   .hero .txtCtn {
     font-size: 18pt;
   }
+
+  .hero .ctn img {
+    max-width: 380px;
+  }
 }
 
 @media (max-width: 960px) {
@@ -280,10 +290,30 @@ footer .copyright {
   .altCtn {
     align-items: center;
     flex-direction: column;
+    text-align: center;
   }
   
   .altCtn:nth-child(2n) {
     margin-top: 20px;
     flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 435px) {
+  .altChildCtn {
+    max-width: 300px;
+  }
+
+  .altChildCtn img {
+    max-height: 220px;
+    margin-right: 0;
+  }
+
+  .hero .ctn img {
+    max-width: 300px;
+  }
+
+  .hero .txtCtn {
+    font-size: 16pt;
   }
 }

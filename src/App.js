@@ -70,7 +70,7 @@ function App() {
       <div className={styles.altChildCtn}>
       <img
       src={section1}
-      style={{ marginRight: "30px" }}
+      // style={{ marginRight: "30px" }}
       alt=""
       />
       </div>
@@ -92,7 +92,7 @@ function App() {
       <div className={styles.altChildCtn}>
       <img
       src={section2}
-      style={{ marginRight: "30px" }}
+      // style={{ marginRight: "30px" }}
       alt=""
       />
       </div>
@@ -124,7 +124,7 @@ function App() {
       <div className={styles.gridItem}>
       <FontAwesomeIcon icon={faList} className={styles.icon} />
       <div className={styles.vCtn}>
-      <h2>Organizations with set lists</h2>
+      <h2>Organization with folders</h2>
       <p>
       Efficiently create and manage setlists to seamlessly organize your performance.
       </p>
