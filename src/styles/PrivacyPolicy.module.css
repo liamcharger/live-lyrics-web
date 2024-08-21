@@ -2,6 +2,33 @@
     padding: 20px;
 }
 
-h1 {
+.header h1 {
+    font-size: 20pt;
+    font-weight: 800;
+    white-space: pre-wrap;
     margin-top: 0;
+}
+
+.header p {
+    color: var(--tertiary);
+}
+
+.header img {
+    max-width: 60px;
+    max-height: 60px;
+    margin-bottom: 10px;
+}
+
+.ctn a {
+    color: var(--primary-color);
+}
+
+.ctn p {
+    line-height: 1.4;
+}
+
+.divider {
+    height: 1px;
+    margin: 30px -20px;
+    border-bottom: var(--border-color) solid 1px;
 }
