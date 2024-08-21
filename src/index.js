@@ -15,7 +15,12 @@ const router = createBrowserRouter([
   },
   {
     path: "login",
-    element: <Login />,
+    element: (
+      // Protect login until development is finished
+    <ProtectedRoute>
+      <Login />
+    </ProtectedRoute>
+    ),
   },
   {
     path: "no-access",
