@@ -16,10 +16,7 @@ const router = createBrowserRouter([
   {
     path: "login",
     element: (
-      // Protect login until development is finished
-    <ProtectedRoute>
       <Login />
-    </ProtectedRoute>
     ),
   },
   {
@@ -29,9 +26,7 @@ const router = createBrowserRouter([
   {
     path: "dashboard",
     element: (
-      <ProtectedRoute>
         <Dashboard />
-      </ProtectedRoute>
     ),
   },
   {
