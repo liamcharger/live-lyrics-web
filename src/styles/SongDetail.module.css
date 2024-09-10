@@ -1,93 +1,64 @@
 .mainCtn {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px #1d1d1dd1;
+    background-color: black;
+    z-index: 1000;
+}
+
+.header h1 {
+    margin: auto 10px;
+    font-size: 16pt;
 }
 
 .sidebar {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 70px;
     bottom: 0;
-    height: 100vh;
-    width: 300px;
-    background-color: rgb(29, 29, 29);
+    right: 0;
+    width: 350px;
+    background-color: rgb(30, 30, 30);
     overflow-y: auto;
+    z-index: 1000;
 }
 
-.sidebar .header {
+.sidebar .sidebarCnt {
+    padding: 12px;
+}
+
+.sidebar p {
+    margin: 0;
+}
+
+.content {
     display: flex;
     flex-direction: row;
-    padding: 10px;
-    border-bottom: solid 1px #323232;
-}
-
-.sidebar .body {
-    padding: 15px;
-    overflow-y: auto;
-    height: calc(100vh - 60px);
-}
-
-.sidebar h4 {
-    width: 23%;
-    margin: 0 auto;
-    font-size: 8.5pt;
+    margin-top: 70px;
+    width: 100%;
+    overflow: hidden;
     text-align: center;
-    font-weight: 800;
-    margin: 0 4px;
-    margin-top: 5px;
-    margin-bottom: 8px;
-    padding: 6px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
 }
 
-.songItm button {
-    display: block;
+.songCnt {
+    padding: 18px;
+    padding-top: 0px;
     width: 100%;
-    text-align: left;
-    font-weight: 500;
-    background: none;
-    border: none;
-    color: white;
-    padding: 13px;
-    cursor: pointer;
-    margin: 0;
-    margin-bottom: 6px;
-}
-
-.songItm button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.main {
-    width: 100%;
-    margin-left: 300px;
-}
-
-.main .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    border-bottom: solid 1px #323232;
-}
-
-.header .infoStack {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    text-align: left;
-}
-
-.infoStack .subtitle {
-    font-size: 10pt;
-    color: darkgray;
-}
-
-.main .header h3 {
-    margin: 0;
-    font-weight: 800;
+    overflow-y: scroll;
+    max-height: calc(100vh - 70px);
+    box-sizing: border-box;
+    position: relative;
 }
 
 .header button {
@@ -95,28 +66,24 @@
     height: 38px;
     padding: 8px;
     border-radius: 25%;
-    background-color: rgb(50, 50, 50);
+    background-color: rgb(30, 30, 30);
     color: white;
-    margin: 0 auto;
+    margin: 0;
     font-weight: 600;
     font-size: 11.5pt;
     text-align: center;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     transition: 0.3s;
 }
 
 .header button:hover {
-    background-color: rgb(40, 40, 40);
+    background-color: rgb(20, 20, 20);
 }
 
 .header button + button {
     margin-left: 10px;
-}
-
-.content {
-    overflow-y: hidden;
-    height: calc(100vh - 60px);
 }
 
 textarea {

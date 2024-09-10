@@ -4,6 +4,7 @@
     gap: 26px;
     height: 100vh;
     padding: 20px;
+    padding-top: 90px;
 }
 
 .leftColumn {
@@ -78,11 +79,11 @@
 }
 
 .songRow:hover {
-    background-color: #2a2b30;
+    background-color: #101113;
 }
 
 .folderRow:hover {
-    background-color: #2a2b30;
+    background-color: #101113;
 }
 
 .songRow h2 {

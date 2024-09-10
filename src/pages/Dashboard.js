@@ -4,6 +4,7 @@ import { collection, doc, getDocs } from "firebase/firestore";
 import { Loading } from "../components";
 import { useAuth } from "../contexts/AuthContext.js";
 import { firestore } from "../firebase";
+import Navbar from "../components/Navbar.js";
 import styles from "../styles/Dashboard.module.css";
 
 function Dashboard() {
@@ -69,6 +70,7 @@ function Dashboard() {
       <Loading />
     ) : (
       <>
+      <Navbar />
       <div className={styles.dashboard}>
       <div className={styles.leftColumn}>
       <div className={styles.overview}>
