@@ -46,7 +46,7 @@
     font-weight: 700;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1030px) {
     .dashboard {
         grid-template-columns: 1fr;
     }
@@ -55,6 +55,21 @@
     .sectionThree {
         grid-column: 1;
         grid-row: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .overview {
+        flex-direction: column;
+    }
+
+    .overview .ctn:nth-child(odd) {
+        border-right: none;
+        border-bottom: #323232 solid 1px;
+    }
+
+    .overview .ctn {
+        width: 100%;
     }
 }
 
