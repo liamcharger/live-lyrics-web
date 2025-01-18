@@ -1,3 +1,5 @@
+<img src="https://cloud-iqie39lvu-hack-club-bot.vercel.app/0screenshot_2025-01-13_at_3.32.35___pm.png">
+
 # Live Lyrics on the Web
 
 > [!NOTE]
