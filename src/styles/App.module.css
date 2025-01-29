@@ -6,8 +6,6 @@ body {
 
 .main {
   margin-top: 20px;
-  /* Shrink space due to absent navbar */
-  /* margin-top: 70px; */
 }
 
 .hero {
